@@ -1,0 +1,247 @@
+body {
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font: normal 15pt Arial, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+
+header {
+    text-align: center;
+    background: rgba(216, 216, 237, 0.1);
+    width: 350px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.2);
+}
+
+header p {
+    margin-top: -15px;
+    font-size: 14px;
+}
+
+/* Título JarvisCore */
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(
+        45deg,
+        black,
+        #7f00ff,
+        #00f0ff,
+        blue
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: mudarCores 10s ease infinite;
+}
+
+
+@keyframes mudarCores {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Conteúdo */
+
+main {
+    width: 1100px;
+    max-width: 90%;
+    margin: auto;
+}
+
+section {
+    background: rgba(216, 216, 237, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow:
+        5px 5px 20px rgba(0,0,0,0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #00f0ff;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #7f00ff;
+    margin-top: 25px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Rodapé */
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* Celular */
+
+@media(max-width:700px) {
+
+    header {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        max-width: 95%;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Navegação */
+
+nav {
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+    margin-bottom: 25px;
+
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background: rgba(216, 216, 237, 0.1);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0px 0px 20px rgba(0,255,255,0.2);
+
+}
+
+
+
+/* Logo */
+
+.logo {
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+
+    background:
+    linear-gradient(
+        45deg,
+        purple,
+        #00f0ff,
+        blue
+    );
+
+
+    background-size: 200% 200%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+
+    animation:
+    mudarCores 8s ease infinite;
+
+}
+
+
+
+/* Links */
+
+.links {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+
+.links a {
+
+    color: whitesmoke;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+
+.links a:hover {
+
+    color: #00f0ff;
+
+    text-shadow:
+    0px 0px 10px #00f0ff;
+
+}
+
+/* Celular */
+
+@media(max-width:700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Link ativo */
+
+.nav-link.active {
+    color: #00f0ff;
+    text-shadow:
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff;
+    border-bottom: 2px solid #00f0ff;
+    padding-bottom: 5px;
+}
