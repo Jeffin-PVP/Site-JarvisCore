@@ -36,3 +36,53 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+async function updateStatus() {
+
+
+    const response =
+        await fetch("https://localhost:3000.com");
+
+
+    const data =
+        await response.json();
+
+
+
+    const dot =
+        document.querySelector("#status-dot");
+
+
+    const text =
+        document.querySelector("#status-text");
+
+
+
+    if (data.online) {
+
+
+        dot.className = "online";
+
+
+        text.innerHTML = "Online";
+
+
+    }
+
+
+    document.querySelector("#ping")
+        .innerHTML = data.ping;
+
+
+    document.querySelector("#servers")
+        .innerHTML = data.servers;
+
+
+}
+
+
+
+updateStatus();
+
+
+setInterval(updateStatus, 30000);
