@@ -245,3 +245,59 @@ nav {
     border-bottom: 2px solid #00f0ff;
     padding-bottom: 5px;
 }
+
+/* Botão Discord */
+
+.discord-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background:
+    linear-gradient(
+        45deg,
+        #6805a1,
+        #00f0ff
+    );
+    border-radius: 30px;
+    box-shadow:
+    0 0 10px #5865F2,
+    0 0 25px #00f0ff;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+
+.discord-button:hover {
+    transform: scale(1.08);
+    box-shadow:
+    0 0 20px #5865F2,
+    0 0 40px #00f0ff,
+    0 0 60px #00f0ff;
+}
+
+.discord-button {
+    animation:
+    pulsar 2s infinite;
+}
+
+
+@keyframes pulsar {
+
+    0% {
+        box-shadow:
+        0 0 10px #5865F2;
+    }
+
+    50% {
+        box-shadow:
+        0 0 30px #00f0ff;
+    }
+
+    100% {
+        box-shadow:
+        0 0 10px #5865F2;
+    }
+}
